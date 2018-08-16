@@ -1,3 +1,9 @@
+/* Test fonts
+font-family: 'Shadows Into Light', cursive, 'Arial', sans-serif;*/
+/*font-family: 'Lato', 'Arial', sans-serif;*/
+/*font-family: 'Permanent Marker', cursive;*/
+/*font-family: 'Merienda', cursive;*/
+
 * {
      margin: 0;
      padding: 0;
@@ -26,10 +32,7 @@ header {
 }
 
 .logo {
-     /*font-family: 'Shadows Into Light', cursive, 'Arial', sans-serif;*/
-     /*font-family: 'Lato', 'Arial', sans-serif;*/
-     /*font-family: 'Permanent Marker', cursive;*/
-     /*font-family: 'Merienda', cursive;*/
+
      /*display: inline-block;*/
      text-decoration: none;
      color: white;
@@ -39,7 +42,6 @@ header {
 }
 
 .logo_small {
-     /*display: inline-block;*/
      text-decoration-line: line-through;
      font-size: 1.5rem;
      padding-left: 3px;
@@ -50,7 +52,6 @@ header {
 .header_box{
      height: 45px;
      display: flex;
-     /*justify-content: space-between;*/
      align-items: center;
 }
 
@@ -98,8 +99,7 @@ header {
      margin-left: 20px;
 }
 .category_btn{
-     /*height: 30px;*/
-     /*width: 40px;*/
+
      font-size: 12px;
      padding: 5px;
      margin: 0 2px;
