@@ -3,47 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>TO DO LISY</title>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:400,700&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Rancho" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <span>TO DO LISY</span>
+<header>
+    <div class="main_wrapper">
+        <div class="header_box">
+            <!--<div class="logo">-->
+                <a href="#" class="logo">
+                    <span>To</span><span class="logo_small">do</span>
+                </a>
+            <input type="text" id="quick_add" placeholder="szybkie dodanie">
+            <div class="add-btn"><span>+</span></div>
+            <div class="category_btn_box">
+                <div class="category_btn"><span>Praca</span></div>
+                <div class="category_btn"><span>Dom</span></div>
+                <div class="category_btn"><span>Zakupy</span></div>
+                <div class="category_btn"><span>Cośtam</span></div>
+            </div>
         </div>
+    </div>
+</header>
 
-        <nav>
-            <ul class="menu">
-                <li class="list">Praca</li>
-                <li class="list">Zakupy</li>
-                <li class="list">Filmy</li>
+<section class="main-container">
+    <div class="add-event">
+        <!--<div>-->
+            <!--<span>Dodaj zadanie +</span>-->
+        <!--</div>-->
+        <form>
+            <!--pola formularza, domyślnie schowane -->
+        </form>
+    </div>
+    <div class="to-do-list">
+        <div class="list-header">
+            <!--nagłówek listy-->
+        </div>
+        <div class="list-content">
+            <ul class="list-items">
+                <!--elementy listy-->
             </ul>
-        </nav>
-    </header>
-
-    <section class="main-container">
-        <div class="add-event">
-            <div>
-                <span>Dodaj zadanie +</span>
-            </div>
-            <form>
-                <!--pola formularza, domyślnie schowane -->
-            </form>
-        </div >
-        <div class="to-do-list">
-            <div class="list-header">
-                <!--nagłówek listy-->
-            </div>
-            <div class="list-content">
-                <ul class="list-items">
-                    <!--elementy listy-->
-                </ul>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
 </body>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/app.js"></script>
 </html>
