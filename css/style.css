@@ -108,3 +108,75 @@ header {
      background: rgba(253,255,255,0.25);
      cursor: pointer;
 }
+
+/*nie ma tego w scss*/
+.to-do-list{
+    width:500px;
+    margin:20px auto;
+}
+.list-header{
+    z-index:10;
+    width:100%;
+    height:100px;
+    background-image: url('../images/notepad.png');
+    background-size:cover;
+
+}
+.list-header h2{
+    font-family: 'Permanent Marker', cursive;
+    font-size:2em;
+    padding-left:60px;
+    padding-top:50px;
+}
+
+.list-content{
+    /*nakładam osobne obrazy, żeby ten drut na górze sie nie rozjeżdzał
+    przy wiekszej ilości zadań*/
+    background-image: url("../images/notepadFooter.png");
+    background-size: 100% 100%;
+    width:100%;
+    padding:0 50px;
+    min-height:500px;
+    display:flex;
+    flex-direction:column;
+    /*align-items:stretch;*/
+    /*justify-content:space-between;*/
+}
+.list-items {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    /*font-size:1.2em;*/
+    list-style:decimal;
+    padding:10px 0;
+}
+.list-items li{
+    /*font-family: 'Permanent Marker', cursive;*/
+    /*list-style:none;*/
+    display:flex;
+    flex-direction:column;
+    /*justify-content:space-between;*/
+    padding-top:20px;
+    line-height:1em;
+}
+.list-items button{
+    background:none;
+    text-decoration: underline;
+    font-size:0.7em;
+    padding: 0 5px;
+    font-family: 'Kalam', cursive;
+    cursor:pointer;
+    border:none;
+    outline:none;
+}
+.done{
+    color:indianred;
+    text-decoration:line-through;
+}
+
+.important{
+    color:darkred;
+    text-decoration:underline;
+
+}
+
+/*do tego momentu*/
