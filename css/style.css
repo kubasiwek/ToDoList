@@ -158,6 +158,9 @@ header {
     padding-top:20px;
     line-height:1em;
 }
+.buttons{
+    display:none;
+}
 .list-items button{
     background:none;
     text-decoration: underline;

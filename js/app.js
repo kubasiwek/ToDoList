@@ -1,59 +1,136 @@
 import "./main.scss";
 
-console.log('dansiofnasoi');
-console.log('dsadasd');
-console.log('xsss');
 
-class userTasks{
-    constructor(){
-        this.input = document.querySelector("#quick_add");
-        this.addInput = document.querySelector(".add-btn");
-        this.taskList = document.querySelector(".list-items");
+const done = $('.doneBtn');
+const important = $('.importantBtn');
+const edit = $('.editBtn');
+const delBtn = $('.delBtn');
+const elements = $('.list-items li');
+
+elements.on('mouseenter', (event) => {
+    let that = $(event.currentTarget);
+    that.find('.buttons').slideToggle();
+});
+elements.on('mouseleave', (event) => {
+    let that = $(event.currentTarget);
+    that.find('.buttons').slideUp();
+});
+
+done.on('click', (event) => {
+    let that = $(event.currentTarget).parent().prev();
+    that.removeClass("important");
+    that.toggleClass("done");
+})
+
+important.on('click', (event) => {
+    let that = $(event.currentTarget).parent().prev();
+    let text = that.text();
+    that.toggleClass("important");
+    if (that.hasClass("important")) {
+        that.text(text + "!!!!!");
+    } else {
+        text = text.replace("!!!!!", "");
+        that.text(text);
     }
-    addInputValue(){
-        this.addInput.addEventListener("click",  () =>{
-            let newLi = document.createElement("li");
-            let newSpan = document.createElement("span");
-            let newDiv = document.createElement("div");
-            let btnEdit = document.createElement("button");
-            let btnImportant = document.createElement("button");
-            let btnDone = document.createElement("button");
-            let btnMoveUp = document.createElement("button");
-            newSpan.innerText = this.input.value;
-            btnEdit.innerText = "Edytuj";
-            btnImportant.innerText = "Ważne";
-            btnDone.innerText = "Wykonano";
-            btnMoveUp.innerText = "Przesuń do góry";
-            newDiv.appendChild(btnEdit);
-            newDiv.appendChild(btnImportant);
-            newDiv.appendChild(btnDone);
-            newDiv.appendChild(btnMoveUp);
-            newLi.appendChild(newSpan);
-            newLi.appendChild(newDiv);
-            this.taskList.appendChild(newLi);
-            console.log(newLi)
-            this.taskEdit();
-        });
-        this.taskEdit();
+
+})
+
+delBtn.on('click', (event) => {
+    let that = $(event.currentTarget);
+    that.parent().parent().remove();
+})
+
+edit.on('click', (event) => {
+    let that = $(event.currentTarget);
+    if (that.text() === "edytuj") {
+        that.parent().prev().attr("contenteditable", "true");
+        that.parent().prev().trigger("focus");
+        that.parent().prev().css("outline", "none");
+        that.text("zatwierdź");
+    } else {
+        that.parent().prev().attr("contenteditable", "false");
+        that.text("edytuj");
     }
-    taskEdit(){
-        let allTasks = [...this.taskList.children];
-        allTasks.forEach( e =>{
-            let edit = e.lastElementChild.firstElementChild;
-            edit.addEventListener("click",function () {
-                const currentLi = this.parentElement.previousElementSibling;
-                this.parentElement.previousElementSibling.setAttribute("contenteditable" , "true")
+})
+
+class userTasks {
+    constructor() {
+        this.input = $("#quick_add");
+        this.addInput = $(".add-btn");
+        this.taskList = $(".list-items");
+    }
+
+    addInputValue() {
+        this.addInput.on('click', () => {
+            let newLi = $('<li>');
+            let newSpan = $("<span>").text(this.input.val());
+            let newDiv = $("<div>", {class: "buttons"});
+            let btnEdit = $("<button>", {class: "editBtn"});
+            btnEdit.text("edytuj");
+            let btnImportant = $("<button>", {class: "importantBtn"});
+            btnImportant.text("ważne");
+            let btnDone = $("<button>", {class: "doneBtn"});
+            btnDone.text("wykonane");
+            let btnDel = $("<button>", {class: "delBtn"});
+            btnDel.text("usuń");
+
+            newDiv.append(btnEdit);
+            newDiv.append(btnImportant);
+            newDiv.append(btnDone);
+            newDiv.append(btnDel);
+            newLi.append(newSpan);
+            newLi.append(newDiv);
+            this.taskList.append(newLi);
+
+            newLi.on('mouseenter', (event) => {
+                let that = $(event.currentTarget);
+                that.find('.buttons').slideToggle();
+            });
+            newLi.on('mouseleave', (event) => {
+                let that = $(event.currentTarget);
+                that.find('.buttons').slideUp();
+            });
+
+            btnDone.on('click', (event) => {
+                let that = $(event.currentTarget).parent().prev();
+                that.removeClass("important");
+                that.toggleClass("done");
+            })
+
+            btnImportant.on('click', (event) => {
+                let that = $(event.currentTarget).parent().prev();
+                let text = that.text();
+                that.toggleClass("important");
+                if (that.hasClass("important")) {
+                    that.text(text + "!!!!!");
+                } else {
+                    text = text.replace("!!!!!", "");
+                    that.text(text);
+                }
+            })
+
+            btnDel.on('click', (event) => {
+                let that = $(event.currentTarget);
+                that.parent().parent().remove();
+            })
+
+            btnEdit.on('click', (event) => {
+                let that = $(event.currentTarget);
+                if (that.text() === "edytuj") {
+                    that.parent().prev().attr("contenteditable", "true");
+                    that.parent().prev().trigger("focus");
+                    that.parent().prev().css("outline", "none");
+                    that.text("zatwierdź");
+                } else {
+                    that.parent().prev().attr("contenteditable", "false");
+                    that.text("edytuj");
+                }
             })
         })
-    }
-    taskImportant(){
-
     }
 }
 
 const user = new userTasks()
-
-console.log(user.addInput)
-console.log(user.taskList)
 user.addInputValue()
-user.taskEdit()
+
+
