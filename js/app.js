@@ -195,7 +195,7 @@ const doTask = (text) => {
     let newLi = $('<li>');
     let newSpan = $("<span>");
     //console.log(text);
-    newSpan.text(input.val());
+    newSpan.text(text);
     let newDiv = $("<div>", {class: "buttons"});
     let btnEdit = $("<button>", {class: "editBtn"});
     btnEdit.text("edytuj");
@@ -258,9 +258,7 @@ const doTask = (text) => {
             that.text("edytuj");
         }
     })
-    task.forEach( (e) =>{
-        doTask(input.val());
-    })
+
 }
 
 
@@ -273,6 +271,6 @@ addInput.on('click', (val)=>{
 })
 
 task.forEach( (e) =>{
-    doTask(input.val());
+    doTask(e);
 })
 
