@@ -12,91 +12,97 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <div class="main_wrapper">
-        <div class="header_box">
-            <!--<div class="logo">-->
+
+    <header>
+        <div class="main_wrapper">
+            <div class="header_box">
+                <!--<div class="logo">-->
                 <a href="#" class="logo">
                     <span>To</span><span class="logo_small">do</span>
                 </a>
-            <div class="add_new_task">
-            <input type="text" id="quick_add" placeholder="szybkie dodanie">
-            <div class="add-btn"><span>+</span></div>
-            </div>
-            <div class="category_btn_box">
-                <div class="category_btn"><span>Praca</span></div>
-                <div class="category_btn"><span>Dom</span></div>
-                <div class="category_btn"><span>Zakupy</span></div>
-                <div class="category_btn"><span>Cośtam</span></div>
+                <div class="add_new_task">
+                    <input type="text" id="quick_add" placeholder="szybkie dodanie">
+                    <div class="add-btn"><span>+</span></div>
+                </div>
+                <div class="category_btn_box">
+                    <div class="category_btn"><span>Praca</span></div>
+                    <div class="category_btn"><span>Dom</span></div>
+                    <div class="category_btn"><span>Zakupy</span></div>
+                    <div class="category_btn"><span>Cośtam</span></div>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+    <div id="particles-js">
 
-<section class="main-container">
-    <div class="add-event">
-        <!--<div>-->
+    <section>
+        <div class="add-event">
+            <!--<div>-->
             <!--<span>Dodaj zadanie +</span>-->
-        <!--</div>-->
-        <form>
-            <!--pola formularza, domyślnie schowane -->
-        </form>
-    </div>
-    <div class="to-do-list">
-        <div class="list-header">
-            <h2>    To do:</h2>
-            <!--nagłówek listy-->
+            <!--</div>-->
+            <form>
+                <!--pola formularza, domyślnie schowane -->
+            </form>
         </div>
-        <div class="list-content">
-            <ul class="list-items">
-                <!--przykładowe elementy listy-->
-                <li >
-                    <span class="done">Kupić wykrywacz metalu</span>
-                    <div class="buttons">
-                        <button class="editBtn">edytuj</button>
-                        <button class="importantBtn">ważne</button>
-                        <button class="doneBtn">wykonane</button>
-                        <button class="delBtn">Usuń</button>
-                     </div>
-                </li>
-                <li  ><span class="important">Wyjechać do Wałbrzycha</span>
-                    <div class="buttons">
-                        <button class="editBtn">edytuj</button>
-                        <button class="importantBtn">ważne</button>
-                        <button class="doneBtn">wykonane</button>
-                        <button class="delBtn">Usuń</button>
-                    </div></li>
-                <li><span>Znaleźć pociąg</span>
-                    <div class="buttons">
-                        <button class="editBtn">edytuj</button>
-                        <button class="importantBtn">ważne</button>
-                        <button class="doneBtn">wykonane</button>
-                        <button class="delBtn">Usuń</button>
-                    </div></li>
-                <li><span>Pławić się w luksusie</span>
-                    <div class="buttons">
-                        <button class="editBtn">edytuj</button>
-                        <button class="importantBtn">ważne</button>
-                        <button class="doneBtn">wykonane</button>
-                        <button class="delBtn">Usuń</button>
-                    </div>
-                </li>
+        <div class="to-do-list">
+            <div class="list-header">
+                <h2> To do:</h2>
+                <!--nagłówek listy-->
+            </div>
+            <div class="list-content">
+                <ul class="list-items">
+                    <!--przykładowe elementy listy-->
+                    <li>
+                        <span class="done">Kupić wykrywacz metalu</span>
+                        <div class="buttons">
+                            <button class="editBtn">edytuj</button>
+                            <button class="importantBtn">ważne</button>
+                            <button class="doneBtn">wykonane</button>
+                            <button class="delBtn">Usuń</button>
+                        </div>
+                    </li>
+                    <li><span class="important">Wyjechać do Wałbrzycha</span>
+                        <div class="buttons">
+                            <button class="editBtn">edytuj</button>
+                            <button class="importantBtn">ważne</button>
+                            <button class="doneBtn">wykonane</button>
+                            <button class="delBtn">Usuń</button>
+                        </div>
+                    </li>
+                    <li><span>Znaleźć pociąg</span>
+                        <div class="buttons">
+                            <button class="editBtn">edytuj</button>
+                            <button class="importantBtn">ważne</button>
+                            <button class="doneBtn">wykonane</button>
+                            <button class="delBtn">Usuń</button>
+                        </div>
+                    </li>
+                    <li><span>Pławić się w luksusie</span>
+                        <div class="buttons">
+                            <button class="editBtn">edytuj</button>
+                            <button class="importantBtn">ważne</button>
+                            <button class="doneBtn">wykonane</button>
+                            <button class="delBtn">Usuń</button>
+                        </div>
+                    </li>
 
-                <li><span>Docelowo wydaje mi się, że przyciski powinny się pokazywać jako tooltip po najechaniu</span>
-                    <div class="buttons">
-                        <button class="editBtn">edytuj</button>
-                        <button class="importantBtn">ważne</button>
-                        <button class="doneBtn">wykonane</button>
-                        <button class="delBtn">Usuń</button>
-                    </div>
-                </li>
-            </ul>
+                    <li>
+                        <span>Docelowo wydaje mi się, że przyciski powinny się pokazywać jako tooltip po najechaniu</span>
+                        <div class="buttons">
+                            <button class="editBtn">edytuj</button>
+                            <button class="importantBtn">ważne</button>
+                            <button class="doneBtn">wykonane</button>
+                            <button class="delBtn">Usuń</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </section>
     </div>
-</section>
-
 
 <script src="js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="js/out.js"></script>
 </body>
 </html>

@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/QuasterK/ToDoList/issues"
   },
-  "homepage": "https://github.com/QuasterK/ToDoList#readme"
+  "homepage": "https://github.com/QuasterK/ToDoList#readme",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
 }
