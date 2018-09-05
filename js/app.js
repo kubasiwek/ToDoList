@@ -5,23 +5,23 @@ const particle = () => {
     particlesJS("particles-js", {
         "particles": {
             "number": {
-                "value": 6,
+                "value": 80,
                 "density": {
                     "enable": true,
                     "value_area": 800
                 }
             },
             "color": {
-                "value": "#1b1e34"
+                "value": "#ffffff"
             },
             "shape": {
-                "type": "polygon",
+                "type": "circle",
                 "stroke": {
                     "width": 0,
-                    "color": "#000"
+                    "color": "#000000"
                 },
                 "polygon": {
-                    "nb_sides": 6
+                    "nb_sides": 5
                 },
                 "image": {
                     "src": "img/github.svg",
@@ -30,8 +30,8 @@ const particle = () => {
                 }
             },
             "opacity": {
-                "value": 0.3,
-                "random": true,
+                "value": 0.5,
+                "random": false,
                 "anim": {
                     "enable": false,
                     "speed": 1,
@@ -40,25 +40,25 @@ const particle = () => {
                 }
             },
             "size": {
-                "value": 160,
-                "random": false,
+                "value": 3,
+                "random": true,
                 "anim": {
-                    "enable": true,
-                    "speed": 10,
-                    "size_min": 40,
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
                     "sync": false
                 }
             },
             "line_linked": {
-                "enable": false,
-                "distance": 200,
+                "enable": true,
+                "distance": 150,
                 "color": "#ffffff",
-                "opacity": 1,
-                "width": 2
+                "opacity": 0.4,
+                "width": 1
             },
             "move": {
                 "enable": true,
-                "speed": 8,
+                "speed": 6,
                 "direction": "none",
                 "random": false,
                 "straight": false,
@@ -75,11 +75,11 @@ const particle = () => {
             "detect_on": "canvas",
             "events": {
                 "onhover": {
-                    "enable": false,
-                    "mode": "grab"
+                    "enable": true,
+                    "mode": "repulse"
                 },
                 "onclick": {
-                    "enable": false,
+                    "enable": true,
                     "mode": "push"
                 },
                 "resize": true
@@ -196,15 +196,18 @@ const doTask = (text) => {
     let newSpan = $("<span>");
     //console.log(text);
     newSpan.text(text);
+
+
     let newDiv = $("<div>", {class: "buttons"});
-    let btnEdit = $("<button>", {class: "editBtn"});
-    btnEdit.text("edytuj");
-    let btnImportant = $("<button>", {class: "importantBtn"});
-    btnImportant.text("ważne");
-    let btnDone = $("<button>", {class: "doneBtn"});
-    btnDone.text("wykonane");
-    let btnDel = $("<button>", {class: "delBtn"});
-    btnDel.text("usuń");
+    let btnEdit = $('<div class="iconEdit"><i class="icon-pencil"></i></div>');
+    // let btnEdit = $("<em>", {class: "icon-pencil"});
+    // btnEdit.text("edytuj");
+    let btnImportant = $('<div class="iconImp"><i class="icon-attention-alt"></i></div>');
+    // btnImportant.text("ważne");
+    let btnDone = $('<div class="iconDone"><i class="icon-ok"></i></div>');
+    // btnDone.text("wykonane");
+    let btnDel = $('<div class="iconDel"><i class="icon-trash"></i></div>');
+    // btnDel.text("usuń");
 
     newDiv.append(btnEdit);
     newDiv.append(btnImportant);
@@ -214,14 +217,14 @@ const doTask = (text) => {
     newLi.append(newDiv);
     taskList.append(newLi);
 
-    newLi.on('mouseenter', (event) => {
-        let that = $(event.currentTarget);
-        that.find('.buttons').slideToggle();
-    });
-    newLi.on('mouseleave', (event) => {
-        let that = $(event.currentTarget);
-        that.find('.buttons').slideUp();
-    });
+    // newLi.on('mouseenter', (event) => {
+    //     let that = $(event.currentTarget);
+    //     that.find('.buttons').slideToggle();
+    // });
+    // newLi.on('mouseleave', (event) => {
+    //     let that = $(event.currentTarget);
+    //     that.find('.buttons').slideUp();
+    // });
 
     btnDone.on('click', (event) => {
         let that = $(event.currentTarget).parent().prev();

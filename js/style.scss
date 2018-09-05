@@ -1,124 +1,216 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 20px;
-}
-
-body {
-    font-family: 'Lato', 'Arial', sans-serif;
-
-}
-
-header {
-    width: 100%;
-    height: 45px;
-    background: #0D4A4D;
-    color: #fff;
-}
-
-.main_wrapper {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.logo {
-
-    /*display: inline-block;*/
-    text-decoration: none;
-    color: white;
-    font-family: 'Rancho', cursive;
-    font-size: 1.6rem;
-    word-spacing: 20px;
-}
-
-.logo_small {
-    text-decoration-line: line-through;
-    font-size: 1.5rem;
-    padding-left: 3px;
-    position: relative;
-    top: 5px;
-}
-
-.header_box{
-    height: 45px;
-    display: flex;
-    align-items: center;
-}
-
-#quick_add{
-    margin-left: 150px;
-    height: 30px;
-    width: 300px;
-    opacity: 0.6;
-    border: 1px solid white;
-    border-radius: 5px 0 0 5px;
-}
-#quick_add:focus{
-    outline: none;
-}
-#quick_add:hover{
-    opacity: 0.7;
-}
-
-#quick_add::placeholder{
-    padding-left: 10px;
-    font-size: 15px;
-    opacity: 0.8;
-}
-
-.add-btn{
-    width: 40px;
-    height: 30px;
-    margin-left: 1px;
-    background: rgba(253,255,255,0.25);
-    font-size: 25px;
-    border-radius: 0 5px 5px 0;
-}
-
-.add-btn:hover{
-    cursor: pointer;
-    background: rgba(253,255,255,0.4);
-}
-
-.add-btn span{
-    margin-left: 10px;
-}
-
-.category_btn_box{
-    display: flex;
-    margin-left: 20px;
-}
-.category_btn{
-
-    font-size: 12px;
-    padding: 5px;
-    margin: 0 2px;
-}
-.category_btn:hover{
-    background: rgba(253,255,255,0.25);
-    cursor: pointer;
-}
-
-.to-do-list{
-    background-image: url('./notepad.png');
-    width:500px;
-    min-height:1700px;
-    background-size: 100% 100%;
-    margin:20px auto;
-}
-
+///* Test fonts
+//font-family: 'Shadows Into Light', cursive, 'Arial', sans-serif;*/
+///*font-family: 'Lato', 'Arial', sans-serif;*/
+///*font-family: 'Permanent Marker', cursive;*/
+///*font-family: 'Merienda', cursive;*/
+//
+//* {
+//    margin: 0;
+//    padding: 0;
+//    box-sizing: border-box;
+//}
+//
+//canvas{
+//    display:block;
+//    vertical-align:bottom;
+//}
+//
+//#particles-js{
+//    width: 100%;
+//    height: 100%;
+//    background-size: cover;
+//    background: #edeef7 no-repeat 50% 50%;
+//    position: relative;
+//    z-index: -2;
+//    padding:20px;
+//}
+//
+//.particles-js-canvas-el{
+//    position: absolute;
+//    top: 0;
+//    width: 100%;
+//    height: 100%;
+//    z-index: -1 ;
+//}
+//
+//html{
+//    font-size: 20px;
+//}
+//
+//body {
+//    font-family: 'Lato', 'Arial', sans-serif;
+//
+//}
+//
+//header {
+//    width: 100%;
+//    height: 45px;
+//    background: #0D4A4D;
+//    color: #fff;
+//}
+//
+//.main_wrapper {
+//    width: 60%;
+//    margin: 0 auto;
+//}
+//
+//.logo {
+//
+//    /*display: inline-block;*/
+//    text-decoration: none;
+//    color: white;
+//    font-family: 'Rancho', cursive;
+//    font-size: 1.6rem;
+//    word-spacing: 20px;
+//}
+//
+//.logo_small {
+//    text-decoration-line: line-through;
+//    font-size: 1.5rem;
+//    padding-left: 3px;
+//    position: relative;
+//    top: 5px;
+//}
+//
+//.header_box{
+//    height: 45px;
+//    display: flex;
+//    align-items: center;
+//}
+//
+//#quick_add{
+//    margin-left: 150px;
+//    height: 30px;
+//    width: 300px;
+//    opacity: 0.6;
+//    border: 1px solid white;
+//    border-radius: 5px 0 0 5px;
+//}
+//#quick_add:focus{
+//    outline: none;
+//}
+//#quick_add:hover{
+//    opacity: 0.7;
+//}
+//
+//#quick_add::placeholder{
+//    padding-left: 10px;
+//    font-size: 15px;
+//    opacity: 0.8;
+//}
+//
+//.add-btn{
+//    width: 40px;
+//    height: 30px;
+//    margin-left: 1px;
+//    background: rgba(253,255,255,0.25);
+//    font-size: 25px;
+//    border-radius: 0 5px 5px 0;
+//}
+//
+//.add-btn:hover{
+//    cursor: pointer;
+//    background: rgba(253,255,255,0.4);
+//}
+//
+//.add-btn span{
+//    margin-left: 10px;
+//}
+//
+//.category_btn_box{
+//    display: flex;
+//    margin-left: 20px;
+//}
+//.category_btn{
+//
+//    font-size: 12px;
+//    padding: 5px;
+//    margin: 0 2px;
+//}
+//.category_btn:hover{
+//    background: rgba(253,255,255,0.25);
+//    cursor: pointer;
+//}
+//
+//
+//
+//
+//
+//
+//
+///*nie ma tego w scss*/
+//.to-do-list{
+//    width:300px;
+//    background-color: white;
+//    border-radius:20px;
+//    min-height:480px;
+//    margin:0 auto;
+//
+//}
 //.list-header{
-//    background-image: url('../images/notepadHeader.png');
+//    z-index:10;
+//    width:100%;
+//    height:100px;
+//    background: linear-gradient(blue,lightblue);
+//
+//
+//}
+//.list-header h2{
+//    font-family: 'Permanent Marker', cursive;
+//    font-size:2em;
+//    padding-left:60px;
+//    padding-top:50px;
+//}
+//
+//.list-content{
+//    /*nakładam osobne obrazy, żeby ten drut na górze sie nie rozjeżdzał
+//    przy wiekszej ilości zadań*/
+//
 //    background-size: 100% 100%;
 //    width:100%;
-//    height:150px;
-//    z-index: 10;
+//    padding:0 50px;
+//    min-height:500px;
+//    display:flex;
+//    flex-direction:column;
+//    /*align-items:stretch;*/
+//    /*justify-content:space-between;*/
 //}
-
-.list-content{
-
-}
+//.list-items {
+//    font-family: 'Kalam', cursive;
+//    font-weight: 700;
+//    /*font-size:1.2em;*/
+//    list-style:decimal;
+//    padding:10px 0;
+//}
+//.list-items li{
+//    /*font-family: 'Permanent Marker', cursive;*/
+//    /*list-style:none;*/
+//    display:flex;
+//    flex-direction:column;
+//    /*justify-content:space-between;*/
+//    padding-top:20px;
+//    line-height:1em;
+//}
+//.buttons{
+//    display:none;
+//}
+//.list-items button{
+//    background:none;
+//    text-decoration: underline;
+//    font-size:0.7em;
+//    padding: 0 5px;
+//    font-family: 'Kalam', cursive;
+//    cursor:pointer;
+//    border:none;
+//    outline:none;
+//}
+//.done{
+//    color:indianred;
+//    text-decoration:line-through;
+//}
+//
+//.important{
+//    color:darkred;
+//    text-decoration:underline;
+//
+//}

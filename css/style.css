@@ -11,17 +11,20 @@ font-family: 'Shadows Into Light', cursive, 'Arial', sans-serif;*/
 }
 
 canvas{
-    /*display:block;*/
-    /*vertical-align:top;*/
+    display:block;
+    vertical-align:bottom;
 }
 
 #particles-js{
-    width: 100%;
-    height: 100%;
+    width: calc(100vw - 0px);
+    height: calc(100vh - 62px);
     background-size: cover;
-    background: #2c2e43 no-repeat 50% 50%;
+    background: #8edcb6 no-repeat 50% 50%;
     position: relative;
-    z-index: -2;
+    z-index: 0;
+    padding:20px;
+    display:flex;
+    align-items:center;
 }
 
 .particles-js-canvas-el{
@@ -43,7 +46,7 @@ body {
 
 header {
      width: 100%;
-     height: 45px;
+     height: 50px;
      background: #0D4A4D;
      color: #fff;
 }
@@ -72,7 +75,7 @@ header {
 }
 
 .header_box{
-     height: 45px;
+     height: 50px;
      display: flex;
      align-items: center;
 }
@@ -131,34 +134,49 @@ header {
      cursor: pointer;
 }
 
-/*nie ma tego w scss*/
+
+
+
+
+
+
+
 .to-do-list{
-    width:500px;
-    margin:20px auto;
+
+    width:300px;
+    background-color: white;
+    border-radius:20px;
+    min-height:480px;
+    margin:0 auto;
+
 }
 .list-header{
     z-index:10;
     width:100%;
-    height:100px;
-    background-image: url('../images/notepad.png');
-    background-size:cover;
+    height:80px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(blue,dodgerblue);
 
 }
 .list-header h2{
     font-family: 'Permanent Marker', cursive;
     font-size:2em;
     padding-left:60px;
-    padding-top:50px;
+    padding-top:10px;
+    color:white;
+    font-weight:400;
 }
+
 
 .list-content{
     /*nakładam osobne obrazy, żeby ten drut na górze sie nie rozjeżdzał
     przy wiekszej ilości zadań*/
-    background-image: url("../images/notepadFooter.png");
+
     background-size: 100% 100%;
     width:100%;
-    padding:0 50px;
-    min-height:500px;
+    padding:0 20px;
+    min-height:200px;
     display:flex;
     flex-direction:column;
     /*align-items:stretch;*/
@@ -174,15 +192,50 @@ header {
 .list-items li{
     /*font-family: 'Permanent Marker', cursive;*/
     /*list-style:none;*/
+
     display:flex;
     flex-direction:column;
     /*justify-content:space-between;*/
     padding-top:20px;
     line-height:1em;
 }
-.buttons{
-    display:none;
+
+.list-items li span {
+    max-width:100%;
+    word-wrap:break-word;
+    margin-bottom:5px;
 }
+
+.buttons {
+    display:flex;
+    flex-direction:row;
+}
+
+/*.buttons i {*/
+    /*height:20px;*/
+    /*width:20px;*/
+
+/*}*/
+/*.buttons i:hover:before{*/
+    /*cursor: pointer;*/
+/*}*/
+.buttons div{
+    width:30px;
+    height:20px;
+}
+
+.buttons div:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+}
+/*i:hover{*/
+    /*cursor:pointer;*/
+/*}*/
+
+
+
+
+
 .list-items button{
     background:none;
     text-decoration: underline;
